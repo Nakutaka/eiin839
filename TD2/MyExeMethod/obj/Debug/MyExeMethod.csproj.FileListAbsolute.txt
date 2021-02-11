@@ -1,0 +1,7 @@
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\bin\Debug\MyExeMethod.exe.config
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\bin\Debug\MyExeMethod.exe
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\bin\Debug\MyExeMethod.pdb
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\obj\Debug\MyExeMethod.csprojAssemblyReference.cache
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\obj\Debug\MyExeMethod.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\obj\Debug\MyExeMethod.exe
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\obj\Debug\MyExeMethod.pdb

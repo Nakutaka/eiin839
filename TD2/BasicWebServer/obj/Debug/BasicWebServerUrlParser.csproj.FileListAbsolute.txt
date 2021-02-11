@@ -5,3 +5,10 @@ C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlPars
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csproj.CoreCompileInputs.cache
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.exe
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.pdb
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.exe.config
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.exe
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.pdb
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csprojAssemblyReference.cache
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.exe
+C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.pdb

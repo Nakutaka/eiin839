@@ -86,7 +86,7 @@ namespace BasicServerHTTPlistener
                 //get path in url 
                 Console.WriteLine(request.Url.LocalPath);
 
-                // parse path in url 
+                // parse path in url
                 foreach (string str in request.Url.Segments)
                 {
                     Console.WriteLine(str);
@@ -97,8 +97,10 @@ namespace BasicServerHTTPlistener
                 Console.WriteLine(request.Url.Query);
 
                 //parse params in url
-                Console.WriteLine("param1 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param1"));
-                Console.WriteLine("param2 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param2"));
+                string param1 = HttpUtility.ParseQueryString(request.Url.Query).Get("param1");
+                string param2 = HttpUtility.ParseQueryString(request.Url.Query).Get("param2");
+                Console.WriteLine("param1 = " + param1);
+                Console.WriteLine("param2 = " + param2);
                 Console.WriteLine("param3 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param3"));
                 Console.WriteLine("param4 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param4"));
 
@@ -108,8 +110,20 @@ namespace BasicServerHTTPlistener
                 // Obtain a response object.
                 HttpListenerResponse response = context.Response;
 
-                // Construct a response.
+                MyMethods m = new MyMethods();
                 string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
+                if ("MyMethod".Equals(request.Url.Segments[request.Url.Segments.Length - 1]))
+                {
+                    responseString = m.myMethod(param1,param2);
+                }
+                else if("MyExeMethod".Equals(request.Url.Segments[request.Url.Segments.Length - 1]))
+                {
+                    responseString = m.myExeMethod(param1, param2);
+                }
+
+                //TODO Utiliser reflection Sample pour call la méthode
+
+                // Construct a response.
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 // Get a response stream and write the response to it.
                 response.ContentLength64 = buffer.Length;
