@@ -18,7 +18,7 @@ namespace BasicServerHTTPlistener
         public string myExeMethod(string param1, string param2)
         {
             ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = @"C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD2\MyExeMethod\bin\Debug\MyExeMethod.exe";
+            start.FileName = @"D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD2\MyExeMethod\bin\Debug\MyExeMethod.exe";
             start.Arguments = param1+" "+param2;
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
