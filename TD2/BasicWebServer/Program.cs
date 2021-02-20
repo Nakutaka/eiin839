@@ -30,7 +30,7 @@ namespace BasicServerHTTPlistener
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(ex);
-                Console.WriteLine("No method named '" + stringMethod + "' exists.");
+                Console.WriteLine("No method named \'" + stringMethod + "\' exists.");
                 Console.ResetColor();
                 result = "<html><body style=\"color:#f00; font-weight:bold; text-align:center; font-family:sans-serif; font-size:50px; padding-top:4em;\">An error ocurred : method "+stringMethod+" not found</body></html>";
             }
