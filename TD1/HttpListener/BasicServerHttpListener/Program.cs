@@ -73,6 +73,8 @@ namespace BasicServerHTTPlistener
 
                 Header header = new Header(request.Headers);
                 header.printAllHeaders();
+
+                // Change the parameter here to print the chosen header
                 header.printSingleHeader(HttpRequestHeader.Host);
 
                 // Construct a response.

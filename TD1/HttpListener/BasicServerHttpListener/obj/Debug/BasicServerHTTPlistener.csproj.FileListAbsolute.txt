@@ -32,3 +32,10 @@ C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD1\HttpListener\BasicServerHtt
 C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.CoreCompileInputs.cache
 C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.exe
 C:\Users\alexa\Documents\Polytech\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.pdb
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe.config
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.pdb
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csprojAssemblyReference.cache
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.CoreCompileInputs.cache
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.exe
+D:\Docu\Polytech_Nice\2020-2021\S8\SOC\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.pdb
