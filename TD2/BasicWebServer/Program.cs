@@ -14,10 +14,28 @@ namespace BasicServerHTTPlistener
         static string executeMethod(string stringMethod, string param1, string param2)
         {
             Type type = typeof(MyMethods);
+            string result;
             MethodInfo method = type.GetMethod(stringMethod);
             MyMethods c = new MyMethods();
-            Console.WriteLine("Executed method " + stringMethod);
-            return (string) method.Invoke(c, new object[] { param1, param2 });
+            Console.ForegroundColor = ConsoleColor.Green;
+            try
+            {
+                // !!!!!!!!! Exception pause the execution if started in debug mode
+                // Click continue or start in non-debugging mode
+                result = (string) method.Invoke(c, new object[] { param1, param2 });
+                Console.WriteLine("Executed method " + stringMethod);
+                Console.ResetColor();
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(ex);
+                Console.WriteLine("No method named '" + stringMethod + "' exists.");
+                Console.ResetColor();
+                result = "<html><body style=\"color:#f00; font-weight:bold; text-align:center; font-family:sans-serif; font-size:50px; padding-top:4em;\">An error ocurred : method "+stringMethod+" not found</body></html>";
+            }
+            return result;
+
         }
 
         static void writeInfos(HttpListenerRequest request)
@@ -124,7 +142,12 @@ namespace BasicServerHTTPlistener
                 // Obtain a response object.
                 HttpListenerResponse response = context.Response;
 
-                string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
+                // *-*-*-*-*-*-*-* Urls example *-*-*-*-*-*-*-*
+                // localhost:8080/anything/textColoring?param1=red&param2=Ce texte sera vert!
+                // localhost:8080/anything/multMethod?param1=95&param2=6
+
+
+                string responseString = "<HTML><BODY>You can request an url like localhost:8080/anything/textColoring?param1=red&param2='My text'</BODY></HTML>";
                 string method = request.Url.Segments[request.Url.Segments.Length - 1];
                 if (method != "favicon.ico")
                 {

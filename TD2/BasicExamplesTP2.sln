@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalExeCall", "External
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicWebServerUrlParser", "BasicWebServer\BasicWebServerUrlParser.csproj", "{B6A28AAE-DA86-41D3-8A15-9B529A3AD71C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyExeMethod", "MyExeMethod\MyExeMethod.csproj", "{C2F80A68-93A6-4E5C-AC2B-B159630388FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultMethod", "MyExeMethod\MultMethod.csproj", "{C2F80A68-93A6-4E5C-AC2B-B159630388FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
