@@ -15,6 +15,22 @@ namespace TD3
         private static string API_KEY = "21cd0d074e546da8f6a413eaad3243855368e4be";
         static readonly HttpClient client = new HttpClient();
 
+        static void printError(string msg)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("ERR: ");
+            Console.ResetColor();
+            Console.WriteLine(msg);
+        }
+
+        static void printInfo(string msg)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("INFO: ");
+            Console.ResetColor();
+            Console.WriteLine(msg);
+        }
+
         static async void getJCDecauxContracts()
         {
             HttpResponseMessage response;
@@ -83,17 +99,30 @@ namespace TD3
             }
         }
 
-        static async Task<Station> getNearestStation(string contrat, GeoCoordinate targetCoordinate)
+        static async void getNearestStation(string contrat, GeoCoordinate targetCoordinate)
         {
             List<Station> stations = await getStationsOfContract(contrat);
-            stations.Sort((station1, station2) =>
+            
+            if (stations == null)
             {
-                GeoCoordinate g1 = new GeoCoordinate(station1.getLat(), station1.getLng());
-                GeoCoordinate g2 = new GeoCoordinate(station2.getLat(), station2.getLng());
-                return g1.GetDistanceTo(targetCoordinate).CompareTo(g2.GetDistanceTo(targetCoordinate));
-            });
+                printError("Unable to fetch stations due to an HTTP error.");
+            }
+            else if(stations.Count == 0)
+            {
+                printInfo("No station was found.");
+            }
+            else
+            {
+                stations.Sort((station1, station2) =>
+                {
+                    GeoCoordinate g1 = new GeoCoordinate(station1.GetLat(), station1.GetLng());
+                    GeoCoordinate g2 = new GeoCoordinate(station2.GetLat(), station2.GetLng());
+                    return g1.GetDistanceTo(targetCoordinate).CompareTo(g2.GetDistanceTo(targetCoordinate));
+                });
 
-            return stations[0];
+                printInfo("Target Latitude: " + targetCoordinate.Latitude + " | Target Longitude: " + targetCoordinate.Longitude);
+                Console.WriteLine("*** Nearest Station ***" + stations[0]);
+            }
         }
 
         static async void printStationsOfContract(string contract)
@@ -107,25 +136,14 @@ namespace TD3
 
         static void Main(string[] args)
         {
+            GeoCoordinate target = new GeoCoordinate(50.861784, 4.302608);
+
             /*            getJCDecauxContracts();
                         Console.WriteLine("\n\n");
                         getStationInfo(231, "bruxelles");*/
-            //Station station = await getNearestStation("bruxelles")
-            MainAsync().GetAwaiter().GetResult();
+            getNearestStation("bruxelles", target);
             
-
             Console.ReadLine();
-        }
-
-        private static async Task MainAsync()
-        {
-            //printStationsOfContract("bruxelles");
-            GeoCoordinate target = new GeoCoordinate(50.861784, 4.302608);
-            Station nearest = await getNearestStation("bruxelles", target);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Target Latitude: " + target.Latitude + "\nTarget Longitude: " + target.Longitude);
-            Console.WriteLine("*** Nearest Station ***" + nearest);
-            Console.ResetColor();
         }
     }
 }

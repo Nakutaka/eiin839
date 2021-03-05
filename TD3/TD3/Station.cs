@@ -10,25 +10,29 @@ namespace TD3
     class Station
     {
         public string contract_name { get; set; }
+
+        public string name { get; set; }
+
         public int number { get; set; }
 
         public Position position { get; set; }
 
         public Station() { }
 
-        public Station(string name, int number, Position position)
+        public Station(string contract_name ,string name, int number, Position position)
         {
-            this.contract_name = name;
+            this.contract_name = contract_name;
+            this.name = name;
             this.number = number;
             this.position = position;
         }
 
-        public double getLat()
+        public double GetLat()
         {
             return position.lat;
         }
 
-        public double getLng()
+        public double GetLng()
         {
             return position.lng;
         }
@@ -36,7 +40,7 @@ namespace TD3
         override
         public string ToString()
         {
-            string str = "\nContract_Name: " + contract_name + "\nNumber: " + number + "\n" + position.ToString();
+            string str = "\nContract_Name: " + contract_name + "\nName: "+ name +"\nNumber: " + number + "\n" + position.ToString();
             return str;
         }
     }
