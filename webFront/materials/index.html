@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- The title of the page is written in the tab of the browser. -->
-    <title>My first Web Services UI client</title>
-</head>
-<body>
-    <h1 id="workingTest"></h1>
-</body>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <meta charset="UTF-8">
+        <!-- The title of the page is written in the tab of the browser. -->
+        <title>My first Web Services UI client</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="main.js"></script>
+        <div class="section">
+            <label for="input">Type an api key name : </label><br>
+            <input type="text" placeholder="api key" id="input">
+            <button onclick="retrieveAllContracts()">Retrieve Contracts</button><br>
+            <label for="list">List of contracts :</label><br>
+            <input list="list" id="contract-list">
+            <datalist id="list"></datalist>
+        </div>
+        <div class="section">
+            <button onclick="retrieveContractStations()">List stations of selected contract</button>
+        </div>
+        <div class="section">
+            <label for="lat">Enter Latitude : </label><br>
+            <input id="lat" placeholder="latitude"><br>
+            <label for="lon">Enter Longitude : </label><br>
+            <input id="lon" placeholder="longitude">
+            <button onclick="getClosestStation()">Closest Station</button>
+        </div>
+    </body>
 </html>

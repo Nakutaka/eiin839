@@ -1,3 +1,13 @@
+html{
+    font-family: sans-serif;
+}
+
 #workingTest {
     color: blue;
+}
+
+.section{
+    border: 1px solid black;
+    margin: 3em auto;
+    padding: 2em;
 }
