@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsLibrary", "MathsLibrary.csproj", "{60D0C7DD-8D46-4D97-9683-1E5F06448D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soap", "..\..\webFront\soap\Soap\Soap.csproj", "{A7B7ACA4-0D92-4EC3-AB49-54A724260698}"
+	ProjectSection(ProjectDependencies) = postProject
+		{60D0C7DD-8D46-4D97-9683-1E5F06448D10} = {60D0C7DD-8D46-4D97-9683-1E5F06448D10}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60D0C7DD-8D46-4D97-9683-1E5F06448D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D0C7DD-8D46-4D97-9683-1E5F06448D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D0C7DD-8D46-4D97-9683-1E5F06448D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D0C7DD-8D46-4D97-9683-1E5F06448D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B7ACA4-0D92-4EC3-AB49-54A724260698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B7ACA4-0D92-4EC3-AB49-54A724260698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B7ACA4-0D92-4EC3-AB49-54A724260698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B7ACA4-0D92-4EC3-AB49-54A724260698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00D4CEEE-664E-49BB-BA46-A2F5C80CFB41}
+	EndGlobalSection
+EndGlobal
